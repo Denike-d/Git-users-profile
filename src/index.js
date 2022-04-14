@@ -1,13 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import HomePage from './component/HomePage';
+import GithubInfo from './pages/GithubInfo';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <Routes>
+      <Route index element={<HomePage />} />
+      <Route path="/githubinfo" element={<GithubInfo />} />
+    </Routes>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 

@@ -17,7 +17,7 @@ export default function RepoTable(props) {
             ))}
             </tr>
             </thead>  
-            <tbody className="bg-white divide-y divide-gray-200">
+           <tbody className="bg-white divide-y divide-gray-200">
               {repoData.map((repo,index) => (
                 <tr key={index} className="divide-x divide-gray-200 items-center">
                   <td className="whitespace-nowrap px-3 py-4">{repo.name}</td>

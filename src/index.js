@@ -5,12 +5,18 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import HomePage from './component/HomePage';
 import GithubInfo from './pages/GithubInfo';
+import ProfileDisplay from './component/ProfileDisplay';
+import RepoTable from './component/RepoTable';
+import Hello from './component/Hello';
 
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
-      <Route index element={<HomePage />} />
-      <Route path="/githubinfo" element={<GithubInfo />} />
+        <Route path="/">
+        <Route path="/" element={<HomePage />} />
+        <Route path="/profile" element={<ProfileDisplay />} />
+        </Route>
+        {/*<Route path="/git" element={<GithubInfo />} />*/}
     </Routes>
   </BrowserRouter>,
   document.getElementById('root')

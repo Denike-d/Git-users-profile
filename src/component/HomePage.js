@@ -49,11 +49,11 @@ function HomePage() {
               <button
               className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-r-lg shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               onClick={handleClick}
-              >Display Profile</button>
+              >Show user</button>
           </div>
           </form>
-          {error && (<h2 className='flex justify-center mt-4'>
-            Username not found</h2> )}
+          {error && (<h2 className='flex justify-center mt-4 text-red-600'>
+            !Username not found</h2> )}
             </div>
           </>
         );

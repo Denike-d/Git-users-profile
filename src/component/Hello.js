@@ -1,18 +1,20 @@
 import React from 'react'
-import { Link } from "react-router-dom";
 
 export default function Hello() {
   return (
-    <div>
-      <h1>Hello</h1>
-      
-      <div>
-            <Link to="/git">
-              <button 
-              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-              >Display Profile</button>
-            </Link>
-          </div>
+    <>
+    <div className="block lg:flex lg:w-64 lg:flex-col lg:fixed lg:inset-y-0 border-r border-gray-200">
+      <div className="flex-1 flex flex-col min-h-0 bg-indigo-500">
+        <h2>Name</h2>
+        <h2>Name</h2>
+        <h2>Name</h2>
+        <h2>Name</h2>
+      </div>
     </div>
+    <main className="lg:pl-64 bg-gray-100 min-h-screen">
+      <h3>Hi</h3>
+    </main>
+    
+    </>
   )
 }

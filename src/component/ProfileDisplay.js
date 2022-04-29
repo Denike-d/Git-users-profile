@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
-import { useLocation } from 'react-router-dom'
-import Hello from './Hello'
+import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import LocationLogo from './LocationLogo.png'
+import LocationMarkerIcon from "@heroicons/react/outline"
 
 const tableHeading =[{label: "Name of Repository"},{label:"Description"},{label: "Created on"}]
 
@@ -9,7 +10,8 @@ export default function ProfileDisplay() {
   const location = useLocation()
   const profile= location.state;
 
-  const repo_url = "https://api.github.com/users/" + profile.login +"/repos"
+  const repo_url = "https://api.github.com/users/" + profile.login +"/repos";
+  const address = "https://www.google.com/maps/place/" + profile.location
 
   fetch(repo_url)
   .then((response) => {
@@ -28,7 +30,12 @@ export default function ProfileDisplay() {
          <img src={profile.avatar_url} className='rounded-full w-40 h-40 mx-auto' />
           <p className='text-xl font-bold'>{profile.name}</p>
           <p className='text-md'>@{profile.login}</p>
+          <div className='flex justify-between text-cyan-700'>
           <p>{profile.location}</p>
+          <a href={address}>
+          <LocationMarkerIcon className="w-4 h-4" />
+          </a>
+          </div>
           <hr className='bg-gray-400'></hr>
           <p className='flex justify-between'>Followers <span className='px-2 rounded-lg text-white bg-cyan-700'>{profile.followers}</span></p>
           <p className='flex justify-between'>Following <span className='px-2 rounded-lg text-white bg-cyan-700'>{profile.following}</span></p>

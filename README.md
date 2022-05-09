@@ -9,7 +9,7 @@ A web application that displays github users' profile and their public repositor
 
 ### Demo
 
-![](.gif)
+![](GithubUserFinder.gif)
 
 ### `npm start`
 

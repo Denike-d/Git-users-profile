@@ -1,6 +1,6 @@
-###
+# Getting Started with Create React App
 
-In the project directory, you can run:
+A web application that displays github users' profile and their public repositories. When a user types a github username and clicks on the “Show user”, the user is redirected to another page that displays the Profile and Public repositories of a github user. If the username is incorrect, an error message is displayed. Each repository is clickable and linked to the original github Project.
 
 ### `npm start`
 

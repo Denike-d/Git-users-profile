@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Notification from "./Notification";
 
 function HomePage() {
   const [userInput, setUserInput] = useState("");
   const [error, setError] = useState("");
-  const [notification, setNotification] = useState(false);
+  // const [notification, setNotification] = useState(false);
 
   let navigate = useNavigate();
 
@@ -26,7 +26,7 @@ function HomePage() {
       response.json().then((userPofile) => {
         navigate("/profile", { state: userPofile });
       });
-    } else if (response.status == 404) {
+    } else if (response.status === 404) {
       setError("Username is incorrect");
     }
   }

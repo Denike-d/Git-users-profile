@@ -3,11 +3,11 @@ import { useLocation } from "react-router-dom";
 // import LocationLogo from "./LocationLogo.png";
 import { LocationMarkerIcon } from "@heroicons/react/outline";
 
-const tableHeading = [
-  { label: "Name of Repository" },
-  { label: "Description" },
-  { label: "Created on" },
-];
+// const tableHeading = [
+//   { label: "Name of Repository" },
+//   { label: "Description" },
+//   { label: "Created on" },
+// ];
 
 export default function ProfileDisplay() {
   const [repo, setRepo] = useState([{}]);
@@ -32,6 +32,7 @@ export default function ProfileDisplay() {
           <div className="flex-1 p-8 flex min-h-0 bg-zinc-200">
             <div className="mx-auto space-y-2">
               <img
+                alt="profile picture"
                 src={profile.avatar_url}
                 className="rounded-full w-40 h-40 mx-auto"
               />

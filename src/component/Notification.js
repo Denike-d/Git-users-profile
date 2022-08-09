@@ -1,9 +1,6 @@
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import { Transition } from "@headlessui/react";
-import {
-  CheckCircleIcon,
-  ExclamationCircleIcon,
-} from "@heroicons/react/outline";
+import { ExclamationCircleIcon } from "@heroicons/react/outline";
 import { XIcon } from "@heroicons/react/solid";
 
 export default function Notification(props) {
@@ -11,15 +8,17 @@ export default function Notification(props) {
   const { show, close, type, heading, paragraph } = props;
 
   let icon;
-  {/*if (type == "success") {
+  {
+    /*if (type == "success") {
     icon = (
       <CheckCircleIcon
         className={"h-6 w-6 text-green-400"}
         aria-hidden="true"
       />
     );
-  }*/}
-  if (type == "error") {
+  }*/
+  }
+  if (type === "error") {
     icon = (
       <ExclamationCircleIcon
         className={"h-6 w-6 text-red-400"}

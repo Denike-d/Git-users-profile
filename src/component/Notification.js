@@ -9,14 +9,14 @@ export default function Notification(props) {
 
   let icon;
   {
-    /*if (type == "success") {
-    icon = (
-      <CheckCircleIcon
-        className={"h-6 w-6 text-green-400"}
-        aria-hidden="true"
-      />
-    );
-  }*/
+    if (type == "success") {
+      icon = (
+        <CheckCircleIcon
+          className={"h-6 w-6 text-green-400"}
+          aria-hidden="true"
+        />
+      );
+    }
   }
   if (type === "error") {
     icon = (

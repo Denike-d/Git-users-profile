@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Notification from "./Notification";
 
 function HomePage() {
   const [userInput, setUserInput] = useState("");

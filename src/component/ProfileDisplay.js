@@ -32,7 +32,7 @@ export default function ProfileDisplay() {
           <div className="flex-1 p-8 flex min-h-0 bg-zinc-200">
             <div className="mx-auto space-y-2">
               <img
-                alt="profile picture"
+                alt="avatar"
                 src={profile.avatar_url}
                 className="rounded-full w-40 h-40 mx-auto"
               />
